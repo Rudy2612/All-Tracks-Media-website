@@ -1,0 +1,238 @@
+body{
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.title-princ-top {
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 120px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 35vh;
+}
+
+.content-project {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.title-bloc-princ {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 31px;
+    /* or 62% */
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.para-bloc-princ {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+    /* or 124% */
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.para-princ-top {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 31px;
+    /* or 124% */
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: -50px;
+    margin-bottom: 100px;
+}
+
+.start-bloc {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.img-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-top: 50vh;
+    transform: translate(0, -50%);
+    z-index: 1000;
+    max-height: 100vh;
+}
+
+.black-img-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.close-img {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.close-img svg {
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.bloc-other-project {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 8%;
+    text-align: center;
+}
+
+.bloc-other-project h6 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 120px;
+}
+
+.flex-other-project {
+    text-align: center;
+}
+
+.img-other-project {
+    position: fixed;
+    width: 40%;
+    margin: 0;
+    opacity: 0.5;
+    transition: 200ms;
+    z-index: -1;
+    left: 30%;
+    bottom: -550px;
+}
+
+.item-other-project a {
+    text-decoration: none;
+}
+
+.item-other-project:hover img {
+    bottom: -230px;
+    transition: 500ms;
+    /* opacity: 1; */
+    transform: rotate(-6deg);
+}
+
+.item-other-project:hover p {
+    margin-top: -5px;
+    transition: 200ms;
+}
+
+
+.item-other-project {
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.item-other-project p {
+    z-index: 1000;
+    transition: 200ms;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: -10px;
+    margin-bottom: 150px;
+}
+
+.bloc-top{
+    height: 100vh;
+}
+
+.img-princ-top-fond{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+@media (max-width: 800px) {
+    .bloc-top{
+        height: auto;
+    }
+    .title-princ-top {
+        font-size: 40px;
+    }
+    .content-project {
+        width: 85%;
+        margin-left: 7.5%;
+    }
+    .bloc-other-project {
+        margin-top: 12%;
+    }
+    .item-other-project p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .img-click {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 50vh;
+        transform: translate(0, -50%);
+        z-index: 1000;
+    }
+
+    .img-princ-top-fond{
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 400px) {
+    .title-princ-top {
+        text-align: center;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 50px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .para-princ-top {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 31px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+
+    /* // TEST  */
+}
