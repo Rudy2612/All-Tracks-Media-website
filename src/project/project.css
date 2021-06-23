@@ -177,6 +177,9 @@ body{
 }
 
 @media (max-width: 800px) {
+    .img-listingMenu{
+        visibility: hidden;
+    }
     .bloc-top{
         height: auto;
     }

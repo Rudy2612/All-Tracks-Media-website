@@ -306,7 +306,92 @@
     transition: transform .6s ease-in-out;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+    .title-photo {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .arr-title-media {
+        font-size: 65px;
+        margin-left: 50px;
+    }
+    .title-media {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: -70px;
+        margin-left: 70px;
+    }
+    .align-media {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .logo-media {
+        width: 40%;
+    }
+    .sous-title-photo {
+        width: 95%;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 35px;
+        -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+        font-weight: 900;
+    }
+    .para-photo {
+        font-size: 12.5px;
+        text-align: justify;
+        width: 95%;
+    }
+    .website-photo {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .bloc-text-photo {
+        margin-top: 20%;
+        transform: translate(0, 0%);
+        margin-left: 5%;
+    }
+    .bloc-photo {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 60%;
+    }
+    .logo-all-t {
+        width: 90%;
+    }
+    .section-flex {
+        display: block;
+    }
+    .section-50 {
+        width: 100%;
+    }
+    .l30l30 {
+        width: 92%;
+        margin-left: 1%;
+    }
+    .section-60 {
+        width: 100%;
+    }
+    .section-40 {
+        width: 100%;
+    }
+    .carIMG {
+        height: auto;
+        width: 100%;
+    }
+    .sec-contact {
+        margin-top: 120%;
+    }
+    .title-contact{
+        font-size: 25px;
+    }
+    .form-contact{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+
+@media (max-width: 500px) {
     .title-photo {
         font-size: 30px;
         line-height: 35px;
@@ -346,14 +431,14 @@
         font-size: 18px;
     }
     .bloc-text-photo {
-        margin-top: 20%;
+        margin-top: 15%;
         transform: translate(0, 0%);
         margin-left: 5%;
     }
     .bloc-photo {
         width: 90%;
         margin-left: 5%;
-        margin-top: 70%;
+        margin-top: 55%;
     }
     .logo-all-t {
         width: 90%;
@@ -389,3 +474,4 @@
         margin-left: 5%;
     }
 }
+
