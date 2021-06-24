@@ -20,17 +20,52 @@ import SSV from "../data/ssvmedia.png"
 import QUAD from "../data/quadmedia.png"
 
 import { Link } from "react-router-dom"
-
+import { init } from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
 export default class all extends Component {
 
     state = {
-        IDActive: 1
+        IDActive: 1,
+
+        nom: "",
+        prenom: "",
+        mail: "",
+        entreprise: "",
+        objet: "",
+        message: "",
     }
 
+    sendMail = e => {
+        var templateParams = {
+            object: this.state.objet,
+            message: this.state.message,
+            nom: this.state.nom,
+            prenom: this.state.prenom,
+            mail: this.state.mail,
+            entreprise: this.state.entreprise,
+        };
+
+        emailjs.send('service_wbheih6', 'template_z340z5f', templateParams)
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                if(response.status === 200){
+                    document.getElementById('confirm-mail').innerHTML="Le message a bien été envoyé"
+                }
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+    }
+
+    handlechange = e =>{
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
 
     componentDidMount() {
 
+        init("user_TwUUvcstEqoWC6zzQRCxj");
 
 
         // boucle carrousel
@@ -176,32 +211,32 @@ export default class all extends Component {
 
                 <section className="section-all sec-contact" id="contact">
                     <h4 className="title-contact">NOUS CONTACTER</h4>
-
+                    <p className="confirm-mail" id="confirm-mail"></p>
                     <div className="form-contact">
                         <div className="section-flex">
                             <div className="section-50">
-                                <input type="text" className="input-form-contact" placeholder="Nom"></input>
+                                <input type="text" className="input-form-contact" id="nom" placeholder="Nom" onChange={this.handlechange}></input>
                             </div>
                             <div className="section-50">
-                                <input type="text" className="input-form-contact" placeholder="Prenom"></input>
+                                <input type="text" className="input-form-contact" id="prenom" placeholder="Prenom" onChange={this.handlechange}></input>
                             </div>
                         </div>
                         <br></br>
                         <div className="section-flex">
                             <div className="section-50">
-                                <input type="text" className="input-form-contact" placeholder="Mail"></input>
+                                <input type="text" className="input-form-contact" id="mail" placeholder="Mail"  onChange={this.handlechange}></input>
                             </div>
                             <div className="section-50">
-                                <input type="text" className="input-form-contact" placeholder="Entreprise"></input>
+                                <input type="text" className="input-form-contact" id="entreprise" placeholder="Entreprise" onChange={this.handlechange}></input>
                             </div>
                         </div>
                         <br></br>
-                        <input type="text" className="input-form-contact" style={{ width: "98%" }} placeholder="Objet"></input>
+                        <input type="text" className="input-form-contact" style={{ width: "98%" }} id="objet" placeholder="Objet du message" onChange={this.handlechange}></input>
                         <br></br>
                         <br></br>
-                        <textarea type="text" rows="3" className="input-form-contact" style={{ width: "98%", height: "auto" }} placeholder="Message"></textarea>
+                        <textarea type="text" rows="3" className="input-form-contact" style={{ width: "98%", height: "auto" }} id="message" placeholder="Messag" onChange={this.handlechange}></textarea>
                         <div style={{ textAlign: "center" }}>
-                            <div className="button-send-contact">Envoyer</div>
+                            <div className="button-send-contact" id="send-contact" onClick={this.sendMail}>Envoyer</div>
                         </div>
                     </div>
                 </section>

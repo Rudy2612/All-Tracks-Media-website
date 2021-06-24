@@ -306,6 +306,14 @@
     transition: transform .6s ease-in-out;
 }
 
+.confirm-mail{
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 30px;
+    color: #42f545;
+    font-weight: 500;
+}
+
 @media (max-width: 900px) {
     .title-photo {
         font-size: 30px;
