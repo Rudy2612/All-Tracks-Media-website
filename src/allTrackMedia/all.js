@@ -234,7 +234,7 @@ export default class all extends Component {
                         <input type="text" className="input-form-contact" style={{ width: "98%" }} id="objet" placeholder="Objet du message" onChange={this.handlechange}></input>
                         <br></br>
                         <br></br>
-                        <textarea type="text" rows="3" className="input-form-contact" style={{ width: "98%", height: "auto" }} id="message" placeholder="Messag" onChange={this.handlechange}></textarea>
+                        <textarea type="text" rows="3" className="input-form-contact" style={{ width: "98%", height: "auto" }} id="message" placeholder="Message" onChange={this.handlechange}></textarea>
                         <div style={{ textAlign: "center" }}>
                             <div className="button-send-contact" id="send-contact" onClick={this.sendMail}>Envoyer</div>
                         </div>
