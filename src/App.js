@@ -10,7 +10,7 @@ import Home from "./home/home"
 import Project from "./project/project"
 import Dashboard from "./dashboard/dashboard"
 
-import AllTracks from "./allTrackMedia/all"
+import AllTracks from "./static/static"
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -54,7 +54,7 @@ class App extends Component {
 
         {/* // home page  */}
         <Route path="/">
-          <AllTracks />
+          <Static />
         </Route>
 
 
