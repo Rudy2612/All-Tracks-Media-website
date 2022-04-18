@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './all.css'
+import './static.css'
 
 import Logo from "../data/logo.png"
 import Top from "../data/top.jpg"

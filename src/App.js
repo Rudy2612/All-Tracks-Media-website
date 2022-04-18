@@ -10,7 +10,7 @@ import Home from "./home/home"
 import Project from "./project/project"
 import Dashboard from "./dashboard/dashboard"
 
-import AllTracks from "./static/static"
+import Static from "./static/static"
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
